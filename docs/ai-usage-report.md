@@ -1,4 +1,4 @@
-# AI Usage Report – Assignment 1
+# AI Usage Report – Assignment 2
 
 ## 1. Tools Used & Use Cases
 
@@ -10,7 +10,7 @@ It helped with:
 - Suggesting repetitive style patterns
 - Speeding up writing of map functions and component layouts
 
-### Claude
+### Claude (AI Assistant)
 Claude was used for problem-solving and debugging support. It was mainly used to:
 
 - Fix layout alignment issues
@@ -25,10 +25,11 @@ Claude was used for problem-solving and debugging support. It was mainly used to
 
 ### Benefits
 
-Using AI tools helped speed up development and reduce debugging time.  
-Copilot improved coding efficiency, while Claude helped explain issues and suggest structured solutions.
+AI tools significantly improved development efficiency and reduced debugging time.  
+GitHub Copilot helped speed up coding, while Claude provided structured explanations and solutions to problems.
 
-AI was especially helpful for resolving styling conflicts and improving UI consistency.
+AI was particularly useful in resolving styling conflicts, improving UI consistency, and refining the overall user experience.
+
 
 ### Challenges
 
@@ -54,8 +55,11 @@ Although core concepts were learned through coursework, AI helped reinforce and 
 
 ## 4. Responsible Use & Modifications
 
-All AI-generated suggestions were reviewed and tested before being integrated into the project.  
-Code was modified to match the existing structure and design requirements.
+All AI-generated content was carefully reviewed, tested, and modified before being integrated into the project.  
 
-I ensured that I understood each implementation and did not submit unmodified AI output without review.  
-AI was used as a support tool rather than a replacement for understanding.
+I ensured that:
+- I understood the logic behind each implementation
+- The code matched the existing structure and design requirements
+- No unmodified AI-generated code was submitted without review
+
+AI was used as a support tool to enhance learning and productivity, not as a replacement for understanding.
