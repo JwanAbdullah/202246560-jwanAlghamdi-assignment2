@@ -10,9 +10,10 @@ function About() {
       <p className="about__bio">
         Passionate about building innovative solutions and learning new
         technologies. I enjoy working on AI-driven applications and developing
-        creative projects. Currently expanding my skills in web development and
-        machine learning.
+        creative projects. Currently expanding my skills in machine learning, 
+        data analysis, and modern web technologies.
       </p>
+      <div className="about__animation"></div>
     </header>
   );
 }
