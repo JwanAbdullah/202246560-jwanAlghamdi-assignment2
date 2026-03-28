@@ -10,12 +10,11 @@ The website now provides a more engaging user experience through interactive ele
 
 ---
 
-## 🚀 Features
+## 🚀 Features 
 
 ### 🔹 Interactivity
 
 * Dynamic section switching using buttons/tabs
-* Show/hide content functionality for better navigation
 * Interactive elements responding to user actions (clicks, input)
 
 ### 🔹 Dynamic Content
@@ -24,7 +23,6 @@ The website now provides a more engaging user experience through interactive ele
 
 ### 🔹 Data Handling
 
-* Form validation with user feedback
 * Displays confirmation or error messages based on input
 * Used localStorage to save user preferences (e.g., dark or light theme , name, settings)
 
@@ -48,7 +46,7 @@ The website now provides a more engaging user experience through interactive ele
 * Vite
 * JavaScript (ES6+)
 * CSS (Flexbox + Transitions)
-* AI-assisted tools (ChatGPT + GitHub Copilot)
+* AI-assisted tools (Claude + GitHub Copilot)
 
 ---
 

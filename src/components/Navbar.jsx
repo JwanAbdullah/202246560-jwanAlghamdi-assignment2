@@ -3,72 +3,46 @@ import React, { useEffect, useState } from "react";
 function Navbar() {
   const [isDark, setIsDark] = useState(true);
 
-  // Restore saved theme on mount
   useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved === "light") {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "light") {
       document.body.classList.add("light");
       setIsDark(false);
     }
   }, []);
 
   const toggleTheme = () => {
-    if (isDark) {
-      document.body.classList.add("light");
-      localStorage.setItem("theme", "light");
-    } else {
+    const nextIsDark = !isDark;
+
+    if (nextIsDark) {
       document.body.classList.remove("light");
       localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.add("light");
+      localStorage.setItem("theme", "light");
     }
-    setIsDark(!isDark);
+
+    setIsDark(nextIsDark);
   };
 
-  {/* In-page navigation links using section IDs */}
   return (
-    <nav style={styles.nav}>
-      <a href="#about" style={styles.link}>About</a>
-      <a href="#experience" style={styles.link}>Experience</a>
-      <a href="#projects" style={styles.link}>Projects</a>
-      <a href="#skills" style={styles.link}>Skills</a>
-      <a href="#contact" style={styles.link}>Contact</a>
+    <nav className="navbar">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
 
-      <button onClick={toggleTheme} style={styles.toggle} aria-label="Toggle theme">
+      <button
+        className="navbar__toggle"
+        onClick={toggleTheme}
+        aria-label="Toggle theme"
+      >
         {isDark ? "☀️" : "🌙"}
       </button>
     </nav>
   );
 }
-
-
-const styles = {
-  nav: {
-    position: "fixed",
-    top: 0,
-    left: "50%",
-    transform: "translateX(-50%)",
-    display: "flex",
-    gap: "25px",
-    background: "rgba(255,255,255,0.1)",
-    padding: "15px 30px",
-    borderRadius: "10px",
-    zIndex: 1000,
-    boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
-    backdropFilter: "blur(5px)",
-    alignItems: "center",
-  },
-  link: {
-    color: "#fff",
-    fontWeight: "bold",
-    transition: "color 0.2s",
-  },
-  toggle: {
-    background: "none",
-    border: "none",
-    cursor: "pointer",
-    fontSize: "1.2rem",
-    padding: "0",
-    lineHeight: 1,
-  },
-};
 
 export default Navbar;

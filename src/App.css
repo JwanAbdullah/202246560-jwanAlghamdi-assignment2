@@ -1,11 +1,270 @@
-/* interaction: hover lift + shadow-ish for cards/badges to improve UI  */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
+  --bg: #121212;
+  --text: #E0E0E0;
+  --muted: #E0E0E0;
+  --card-bg: #444444;
+  --card-title: #B0B0B0;
+  --input-bg: #ffffff;
+  --input-text: #111827;
+  --input-placeholder: #6b7280;
+  --button-bg: #444444;
+  --button-text: #E0E0E0;}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  --bg: #f9f9f7;
+  --text: #433838;
+  --muted: #433838;
+  --card-bg: 	#e5e3d9;
+  --card-title: #433838;
+  --button-bg: #433838;
+  --button-text: #e5e3d9;  
+  --input-bg: #e5e3d9;
+  --input-text: #111827;
+  --input-placeholder: #6b7280;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section {
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--muted);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 10px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.navbar a {
+  font-weight: bold;
+}
+
+.navbar__toggle {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+  line-height: 1;
+  color: inherit;
+}
+
+/* About */
+.about {
+  text-align: center;
+  padding: 120px 20px 60px;
+}
+
+.about__name {
+  font-size: 3rem;
+  margin: 20px 0 10px;
+}
+
+.about__tagline,
+.about__bio {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 800px;
+  margin: 0 auto 16px;
+}
+
+/* Cards */
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 16px;
+  padding: 26px 28px;
+  width: 320px;
+  min-height: 220px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.card__heading {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--card-title);
+}
+
+.card__subheading {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.card__year {
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.card__text {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* Projects */
+.project-card {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.project-card:visited,
+.project-card:active,
+.project-card:hover {
+  color: inherit; 
+}
+
+.project-card__image {
+  width: 135px;
+  height: 135px;
+  object-fit: contain;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill-badge {
+  padding: 10px 20px;
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Contact */
+.contact__form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact__input,
+.contact__textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--input-bg);
+  color: var(--input-text);
+}
+
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+  color: var(--input-placeholder);
+}
+.contact__button {
+  padding: 12px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact__success {
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  color: #dcfce7;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer__social {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer__social a {
+  color: var(--muted);
+  font-weight: bold;
+}
+
+/* Hover effect */
 .cardH {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   will-change: transform;
 }
 
 .cardH:hover {
-  transform: translateY(-10px) scale(1.03) !important;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5) !important;
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
 }
+
