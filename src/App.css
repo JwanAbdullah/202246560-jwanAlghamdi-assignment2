@@ -182,20 +182,47 @@ a {
 }
 
 /* Skills */
-.skills-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+.skills-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px 40px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.skill-badge {
-  padding: 10px 20px;
-  background: var(--card-bg);
-  color: var(--text);
-  border-radius: 8px;
-  font-weight: bold;
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.skill-line {
+  height: 5px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.skill-fill {
+  height: 100%;
+  background: #444444; /* your theme */
+  border-radius: 10px;
+}
+
+body.light .skill-line {
+  background: rgba(0,0,0,0.1);
+}
+
+body.light .skill-fill {
+  background: #433838;
+}
+
+
+
 
 /* Contact */
 .contact__form {
