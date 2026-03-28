@@ -55,7 +55,7 @@ The website now provides a more engaging user experience through interactive ele
 To run this project locally:
 
 1. Clone the repository:
-   `https://github.com/YOUR-USER/YOUR-REPO.git`
+   `https://github.com/JwanAbdullah/202246560-jwanAlghamdi-assignment2.git`
 
 2. Navigate into the project folder:
    `cd portfolio`
